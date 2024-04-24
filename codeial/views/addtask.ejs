@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        <%= title %>
+        Todo || <%= title %>
     </title>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -47,7 +48,7 @@
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item active"
                             style="font-size: 29px; font-family: sans-serif; font-weight: 600; margin-left: -10px;"
-                            aria-current="page"><i class="fa fa-h-square fs-4"></i>
+                            aria-current="page"><i class="fa fa-tasks fs-4"></i>
                             <%= title %>
                         </li>
                     </ol>
@@ -55,13 +56,32 @@
                         <img src="/images/profile.jpg" alt="">
                     </div>
                 </nav>
-                <div class="banner">
-                    <img src="/images/1.png" alt="">
-                    <div class="text-block">
-                        <h4 style="font-family: serif;">Hi, Welcome, <small>Arya swaoop</small></h4>
-                        <!-- <p>Arya swaoop</p> -->
+
+                <form class="row g-3" style="margin-left: 1px; margin-right: 1px;">
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="inputAddress"
+                            placeholder="What do you need to do ?">
                     </div>
-                </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Category</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Choose Category</option>
+                            <option>School</option>
+                            <option>Collage</option>
+                            <option>Project</option>
+                            <option>University</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Due Date</label>
+                        <input type="date" class="form-control" id="inputAddress">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary btn-sm" style="width: 20%;">Add Task</button>
+                    </div>
+                </form>
+
                 <nav aria-label="breadcrumb" class="breadcrumb" style="font-size: 1.2rem;
                 font-weight: 500;
                 font-family: serif;
@@ -247,7 +267,6 @@
                                 </a>
                             </div>
                         </li>
-
                     </ul>
                 </div>
 
