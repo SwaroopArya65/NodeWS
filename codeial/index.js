@@ -5,6 +5,10 @@ const port = 8000;
 
 app.use('/', require('./routers'));
 
+//require and fire the database
+const db = require('./config/mongoose');
+const Contact = require('./models/addtask');
+
 //set up the view engine.
 app.set('view engine', 'ejs');
 app.set('views', './views');

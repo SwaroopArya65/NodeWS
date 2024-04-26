@@ -7,6 +7,7 @@
     <title>
         Todo || <%= title %>
     </title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
         integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
@@ -26,21 +27,21 @@
                     TODO APP
                 </p>
                 <ul>
-                    <li><a href="#"><i class="fa fa-h-square fs-5"></i>
+                    <li><a href="/"><i class="fa fa-h-square fs-5"></i>
                             Home</a>
                     </li>
-                    <li><a href="#"><i class="fa fa-tasks fs-5"></i> Add
+                    <li><a href="/addtask/"><i class="fa fa-tasks fs-5"></i> Add
                             Task</a></li>
                     <li><a href="#"><i class="fa fa-bar-chart fs-5"></i> All
                             Activity</a></li>
                     <li><a href="#"><i class="fa fa-check fs-5"></i> Daily
                             Task</a></li>
-                    <li><a href="#"><i class="fa fa-cog fs-5"></i>
-                            Setting</a></li>
+                    <li><a href="/users/"><i class="fa fa-check fs-5"></i> Account</a></li>
                 </ul>
                 <div class="button">
-                    <button><i class="fa fa-plus" style="margin-right: 12px;"></i> Add
-                        Task</button>
+                    <a class="btn btn-primary" href="/addtask/" role="button"><i class="fa fa-plus"
+                            style="margin-right: 12px;"></i> Add
+                        Task</a>
                 </div>
             </div>
             <div class="col-6">
@@ -57,25 +58,26 @@
                     </div>
                 </nav>
 
-                <form class="row g-3" style="margin-left: 1px; margin-right: 1px;">
+                <form class="row g-3" style="margin-left: 1px; margin-right: 1px;" action="/create-task" method="POST">
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Description</label>
-                        <input type="text" class="form-control" id="inputAddress"
-                            placeholder="What do you need to do ?">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="What do you need to do ?"
+                            name="description">
                     </div>
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Category</label>
-                        <select id="inputState" class="form-select">
+                        <select id="inputState" class="form-select" name="category">
                             <option selected>Choose Category</option>
                             <option>School</option>
                             <option>Collage</option>
                             <option>Project</option>
-                            <option>University</option>
+                            <option>Home</option>
+                            <option>Office</option>
                         </select>
                     </div>
                     <div class="col-md-6">
                         <label for="inputPassword4" class="form-label">Due Date</label>
-                        <input type="date" class="form-control" id="inputAddress">
+                        <input type="date" class="form-control" id="inputAddress" name="duedate">
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary btn-sm" style="width: 20%;">Add Task</button>
@@ -99,88 +101,23 @@
                                         value="option1">
                                     <!-- <label class="form-check-label" for="inlineCheckbox1">1</label> -->
                                     <p style="line-height: 0; padding-top: 6px;">
-                                        Arya Swaroop
+                                        sdfghjk
                                     </p>
                                     <div class="body-details" style="padding-top: 0px;">
                                         <small><i class="fa fa-sun-o fs-6"
                                                 style="padding-right: 2px;"></i>Monday</small>
                                         <small><i class="fa fa-calendar fs-6" style="padding-right: 2px;"></i>
-                                            25-03-2024</small>
+                                            dfghjk
+                                        </small>
                                     </div>
                                 </div>
                             </div>
                             <div class="action-button">
                                 <a href="#">
-                                    <span class="badge bg-secondary">School</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="list">
-                            <div class="details">
-                                <div class="form-check form-check-inline px-4 py-5">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                        value="option1">
-                                    <!-- <label class="form-check-label" for="inlineCheckbox1">1</label> -->
-                                    <p style="line-height: 0; padding-top: 6px;">
-                                        Arya Swaroop
-                                    </p>
-                                    <div class="body-details" style="padding-top: 0px;">
-                                        <small><i class="fa fa-sun-o fs-6"
-                                                style="padding-right: 2px;"></i>Monday</small>
-                                        <small><i class="fa fa-calendar fs-6" style="padding-right: 2px;"></i>
-                                            25-03-2024</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="action-button">
-                                <a href="#">
-                                    <span class="badge bg-secondary">School</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="list">
-                            <div class="details">
-                                <div class="form-check form-check-inline px-4 py-5">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                        value="option1">
-                                    <!-- <label class="form-check-label" for="inlineCheckbox1">1</label> -->
-                                    <p style="line-height: 0; padding-top: 6px;">
-                                        Arya Swaroop
-                                    </p>
-                                    <div class="body-details" style="padding-top: 0px;">
-                                        <small><i class="fa fa-sun-o fs-6"
-                                                style="padding-right: 2px;"></i>Monday</small>
-                                        <small><i class="fa fa-calendar fs-6" style="padding-right: 2px;"></i>
-                                            25-03-2024</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="action-button">
-                                <a href="#">
-                                    <span class="badge bg-secondary">School</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="list">
-                            <div class="details">
-                                <div class="form-check form-check-inline px-4 py-5">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                        value="option1">
-                                    <!-- <label class="form-check-label" for="inlineCheckbox1">1</label> -->
-                                    <p style="line-height: 0; padding-top: 6px;">
-                                        Arya Swaroop
-                                    </p>
-                                    <div class="body-details" style="padding-top: 0px;">
-                                        <small><i class="fa fa-sun-o fs-6"
-                                                style="padding-right: 2px;"></i>Monday</small>
-                                        <small><i class="fa fa-calendar fs-6" style="padding-right: 2px;"></i>
-                                            25-03-2024</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="action-button">
-                                <a href="#">
-                                    <span class="badge bg-secondary">School</span>
+                                    <span class="badge bg-secondary">
+                                        fdghjk
+                                    </span>
+                                    <a role="button" aria-disabled="true"><i class="fa fa-trash"></i></a>
                                 </a>
                             </div>
                         </li>
@@ -217,7 +154,8 @@
                             </div>
                             <div class="action-button">
                                 <a href="#">
-                                    <span class="badge bg-secondary">School</span>
+                                    <span class="badge bg-secondary">Project</span>
+                                    <a role="button" aria-disabled="true"><i class="fa fa-trash"></i></a>
                                 </a>
                             </div>
                         </li>
@@ -241,6 +179,7 @@
                             <div class="action-button">
                                 <a href="#">
                                     <span class="badge bg-secondary">School</span>
+                                    <a role="button" aria-disabled="true"><i class="fa fa-trash"></i></a>
                                 </a>
                             </div>
                         </li>
@@ -263,7 +202,8 @@
                             </div>
                             <div class="action-button">
                                 <a href="#">
-                                    <span class="badge bg-secondary">School</span>
+                                    <span class="badge bg-secondary">Collage</span>
+                                    <a role="button" aria-disabled="true"><i class="fa fa-trash"></i></a>
                                 </a>
                             </div>
                         </li>
@@ -298,7 +238,8 @@
                             </div>
                             <div class="action-button">
                                 <a href="#">
-                                    <span class="badge bg-secondary">School</span>
+                                    <span class="badge bg-secondary">Home</span>
+                                    <a role="button" aria-disabled="true"><i class="fa fa-trash"></i></a>
                                 </a>
                             </div>
                         </li>
@@ -322,6 +263,31 @@
                             <div class="action-button">
                                 <a href="#">
                                     <span class="badge bg-secondary">School</span>
+                                    <a role="button" aria-disabled="true"><i class="fa fa-trash"></i></a>
+                                </a>
+                            </div>
+                        </li>
+                        <li id="list">
+                            <div class="details">
+                                <div class="form-check form-check-inline px-4 py-5">
+                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
+                                        value="option1">
+                                    <!-- <label class="form-check-label" for="inlineCheckbox1">1</label> -->
+                                    <p style="line-height: 0; padding-top: 6px;">
+                                        Arya Swaroop
+                                    </p>
+                                    <div class="body-details" style="padding-top: 0px;">
+                                        <small><i class="fa fa-sun-o fs-6"
+                                                style="padding-right: 2px;"></i>Monday</small>
+                                        <small><i class="fa fa-calendar fs-6" style="padding-right: 2px;"></i>
+                                            25-03-2024</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="action-button">
+                                <a href="#">
+                                    <span class="badge bg-secondary">Project</span>
+                                    <a role="button" aria-disabled="true"><i class="fa fa-trash"></i></a>
                                 </a>
                             </div>
                         </li>
@@ -345,29 +311,7 @@
                             <div class="action-button">
                                 <a href="#">
                                     <span class="badge bg-secondary">School</span>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="list">
-                            <div class="details">
-                                <div class="form-check form-check-inline px-4 py-5">
-                                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1"
-                                        value="option1">
-                                    <!-- <label class="form-check-label" for="inlineCheckbox1">1</label> -->
-                                    <p style="line-height: 0; padding-top: 6px;">
-                                        Arya Swaroop
-                                    </p>
-                                    <div class="body-details" style="padding-top: 0px;">
-                                        <small><i class="fa fa-sun-o fs-6"
-                                                style="padding-right: 2px;"></i>Monday</small>
-                                        <small><i class="fa fa-calendar fs-6" style="padding-right: 2px;"></i>
-                                            25-03-2024</small>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="action-button">
-                                <a href="#">
-                                    <span class="badge bg-secondary">School</span>
+                                    <a role="button" aria-disabled="true"><i class="fa fa-trash"></i></a>
                                 </a>
                             </div>
                         </li>

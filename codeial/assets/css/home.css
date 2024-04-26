@@ -113,7 +113,7 @@ body::-webkit-scrollbar-thumb:hover {
     height: 87vh;
 }
 
-.container .row .col-2 .button button {
+.container .row .col-2 .button a {
     background: white;
     margin-top: 75px;
     border-radius: 3px;
@@ -161,13 +161,10 @@ body::-webkit-scrollbar-thumb:hover {
     bottom: 0px;
     right: 0px;
     background: rgb(0, 0, 0);
-    /* Fallback color */
     background: rgba(0, 0, 0, 0.5);
-    /* background-color: black; */
     color: white;
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 4px;
 }
 
 .container .col-6 .banner img {
